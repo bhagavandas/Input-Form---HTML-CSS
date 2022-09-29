@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic input types</title>
-    <link rel="stylesheets" href="../HTML-INPUTS&FORMS/simpleForm.css">
+    <link rel="stylesheet" href="../simpleForm.css">
   </head>
  <body>
     <form>
@@ -46,7 +46,7 @@
     </div>
     <div>
         <label for="salary">Choose your salary:</label>
-        <input type="range" id="text" name="text" min="300000" max="500000" step="100" value="400000">
+        <input type="range" id="salary" name="salary" min="300000" max="500000" step="100" value="400000">
         <output class="salary-output" for="salary">400000</output>
     </div>
     <div>
@@ -70,5 +70,6 @@
             output.textContent = salary.value;
         });
     </script>
+
    </body>
 </html>

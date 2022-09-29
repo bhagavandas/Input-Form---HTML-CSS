@@ -11,11 +11,12 @@ body{
 
 .headerContainer{
     display: flex;
+    
     flex-flow: column wrap;
     align-content: center;
     background: tomato;
     font-weight: bold;
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 form{
