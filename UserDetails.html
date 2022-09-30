@@ -24,7 +24,11 @@
         <input type="number" id="number" name="number">
         <error-output class="number-error" for="number"></error-output>
     </div>
-    
+    <div>
+        <label for="password">text input type for password:</label>
+        <input type="password" id="password" name="password">
+        <error-output class="password-error" for="password"></error-output>
+    </div>
     <script>
         const firstName = document.querySelector('#firstName');
         const firstNameError = document.querySelector('.firstName-error');
@@ -47,13 +51,20 @@
         const number = document.querySelector('#number');
         const numberError = document.querySelector('.number-error');
         number.addEventListener('input', function(){
-            let numberRegex = RegExp('^[0-9]{2}\\s{0,1}[0-9]{10}$');
+            let numberRegex = RegExp('^[0-9]{1,2}\\s{0,1}[0-9]{10}$');
             if(numberRegex.test(number.value))
             numberError.textContent = "";
             else numberError.textContent = "Phone number is Incorrect";
         });
 
-        
+        const password = document.querySelector('#password');
+        const passwordError = document.querySelector('.password-error');
+        password.addEventListener('input', function(){
+            let passwordRegex = RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.{8,}$)[a-zA-Z0-9]*[@#$%^&-+=()][a-zA-Z0-9]*$'); 
+            if(passwordRegex.test(password.value))
+            passwordError.textContent = "";
+            else passwordError.textContent = "Password is Incorrect";
+        });
         
     </script>
     
